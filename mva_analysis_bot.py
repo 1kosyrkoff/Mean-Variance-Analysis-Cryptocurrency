@@ -139,7 +139,7 @@ def show_plot(portfolios):
 
     for p in portfolios:
         plt.annotate(str(p["n"]), (p["var"], p["ret"]),
-                     textcoords="offset points", xytext=(0, 5),
+                     textcoords="offset points", xytext=(-10, 0),
                      fontsize=5, ha="center")
 
     plt.xlabel("Variance")
@@ -380,7 +380,7 @@ while True:
     for key, (label, _) in menu.items():
         print(f"  [{key}] {label}")
 
-    choice = input("Chice: ").strip()
+    choice = input("Choice: ").strip()
 
     if choice == "0":
         break
