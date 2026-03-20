@@ -134,13 +134,13 @@ def show_plot(portfolios):
         variances.append(p["var"])
         returns.append(p["ret"])
 
-    plt.figure(figsize=(6, 4))
+    plt.figure(figsize=(16, 12))
     plt.scatter(variances, returns, color="red", s=30)
 
     for p in portfolios:
         plt.annotate(str(p["n"]), (p["var"], p["ret"]),
                      textcoords="offset points", xytext=(-10, 0),
-                     fontsize=5, ha="center")
+                     fontsize=12, ha="center")
 
     plt.xlabel("Variance")
     plt.ylabel("Expected return")
